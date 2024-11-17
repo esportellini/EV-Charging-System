@@ -1,0 +1,65 @@
+/* Centralizar o conteúdo da página */
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Preenche toda a altura da tela */
+    background-color: #f4f7fc;
+    padding: 20px;
+}
+
+/* Centralizar o conteúdo do dashboard */
+.dashboard {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px; /* Define um tamanho máximo para o dashboard */
+}
+
+/* Estilos do título */
+h2 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Cartão de status */
+.status-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Estilo das informações de status */
+.status-card p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #34495e;
+}
+
+/* Estilo do texto de carregamento */
+.loading {
+    font-size: 18px;
+    color: #7f8c8d;
+    animation: loading 1s infinite;
+}
+
+/* Animação de carregamento */
+@keyframes loading {
+    0% { color: #7f8c8d; }
+    50% { color: #16a085; }
+    100% { color: #7f8c8d; }
+}
+
+/* Estilo do círculo de progresso */
+.progress-circle {
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+}
