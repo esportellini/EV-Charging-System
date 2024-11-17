@@ -63,26 +63,7 @@ Após iniciar tanto o backend quanto o frontend, abra seu navegador e acesse o e
 # Estrutura do Projeto
 A estrutura do projeto é dividida em duas partes principais:
 
-├── backend
-│   ├── server.js            # Arquivo principal do servidor
-│   ├── database.js          # Conexão e configuração do banco de dados SQLite
-│   ├── routes
-│   │   ├── authRoutes.js    # Rotas de autenticação (login, registro)
-│   │   └── statusRoutes.js  # Rota para consultar status de recarga
-├── frontend
-│   ├── public
-│   │   └── index.html       # Arquivo HTML principal
-│   ├── src
-│   │   ├── components
-│   │   │   ├── Dashboard.js  # Componente principal da dashboard
-│   │   │   ├── Login.js      # Componente de login
-│   │   │   ├── Preferences.js # Componente de preferências
-│   │   │   └── Register.js   # Componente de registro
-│   │   ├── App.js            # Componente principal do React
-│   │   ├── api.js            # Configuração do Axios para chamadas API
-│   │   └── index.js          # Arquivo de entrada do React
-├── .gitignore               # Arquivos a serem ignorados pelo Git
-└── README.md                # Este arquivo
+![image](https://github.com/user-attachments/assets/b57b43de-4bd0-4def-b6e9-43b2015d4b7e)
 
 # Como Contribuir
 
