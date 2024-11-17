@@ -4,17 +4,17 @@ Este é um projeto desenvolvido com React, Express, e SQLite, que visa fornecer 
 
 # Funcionalidades
 
-Login de Usuário: Permite que o usuário faça login com um nome de usuário e senha.
-Dashboard de Recarga: Exibe o status da recarga do veículo, incluindo a fonte de energia e o tempo restante de carregamento, utilizando um círculo de progresso interativo.
-Preferências de Carregamento: O usuário pode definir preferências, como utilizar apenas fontes de energia renováveis ou carregar em horários de menor demanda.
-Cadastro de Novo Usuário: Usuários podem se registrar para utilizar o sistema.
+## Login de Usuário: Permite que o usuário faça login com um nome de usuário e senha.
+## Dashboard de Recarga: Exibe o status da recarga do veículo, incluindo a fonte de energia e o tempo restante de carregamento, utilizando um círculo de progresso interativo.
+## Preferências de Carregamento: O usuário pode definir preferências, como utilizar apenas fontes de energia renováveis ou carregar em horários de menor demanda.
+## Cadastro de Novo Usuário: Usuários podem se registrar para utilizar o sistema.
 
 # Tecnologias Utilizadas
 
-Frontend: React, React Router, React Circular Progressbar
-Backend: Node.js, Express
-Banco de Dados: SQLite
-Autenticação: JWT (JSON Web Token)
+## Frontend: React, React Router, React Circular Progressbar
+## Backend: Node.js, Express
+## Banco de Dados: SQLite
+## Autenticação: JWT (JSON Web Token)
 
 # Como Iniciar
 
@@ -67,11 +67,11 @@ A estrutura do projeto é dividida em duas partes principais:
 
 # Como Contribuir
 
-1- Faça um fork deste repositório.
-2- Crie uma branch para sua modificação (git checkout -b minha-modificacao).
-3- Faça suas alterações e faça commit (git commit -am 'Adiciona nova funcionalidade').
-4- Envie sua branch para o GitHub (git push origin minha-modificacao).
-5- Crie um Pull Request para este repositório.
+## 1- Faça um fork deste repositório.
+## 2- Crie uma branch para sua modificação (git checkout -b minha-modificacao).
+## 3- Faça suas alterações e faça commit (git commit -am 'Adiciona nova funcionalidade').
+## 4- Envie sua branch para o GitHub (git push origin minha-modificacao).
+## 5- Crie um Pull Request para este repositório.
 
 # Licença
 
