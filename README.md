@@ -6,8 +6,8 @@ Este é um projeto desenvolvido com React, Express, e SQLite, que visa fornecer 
 
 #### Login de Usuário: Permite que o usuário faça login com um nome de usuário e senha.
 #### Dashboard de Recarga: Exibe o status da recarga do veículo, incluindo a fonte de energia e o tempo restante de carregamento, utilizando um círculo de progresso interativo.
-## Preferências de Carregamento: O usuário pode definir preferências, como utilizar apenas fontes de energia renováveis ou carregar em horários de menor demanda.
-## Cadastro de Novo Usuário: Usuários podem se registrar para utilizar o sistema.
+#### Preferências de Carregamento: O usuário pode definir preferências, como utilizar apenas fontes de energia renováveis ou carregar em horários de menor demanda.
+#### Cadastro de Novo Usuário: Usuários podem se registrar para utilizar o sistema.
 
 # Tecnologias Utilizadas
 
