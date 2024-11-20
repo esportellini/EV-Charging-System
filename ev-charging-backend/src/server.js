@@ -57,22 +57,55 @@ app.post('/api/register', (req, res) => {
             return res.status(400).send('Usuário já existe');
         }
 
-        const hashedPassword = bcrypt.hashSync(password, 10);
+        const hashedPassword = password;//bcrypt.hashSync(password, 10);
 
         db.run(`INSERT INTO users (username, password) VALUES (?, ?)`, [username, hashedPassword], (err) => {
             if (err) {
                 return res.status(500).send('Erro ao criar usuário');
             }
             res.json({ message: 'Usuário criado com sucesso' });
+            db.all(`SELECT * FROM users`, (err, rows) => {
+                if (err) {
+                    console.error('Erro ao consultar usuários:', err);
+                } else {
+                    console.log('Usuários cadastrados:', rows);
+                }
+            });
         });
     });
 });
 
+// Array de valores possíveis
+const statusValues = ['Concluido', 'Em Progresso', 'Pendente'];
+const energySources = ['Solar', 'Eólica', 'Hidrelétrica'];
+
+// Função para escolher um valor aleatório de um array
+function getRandomValue(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
 // Rota para obter o status de recarga (protege com autenticação)
 app.get('/api/status', authenticateToken, (req, res) => {
-    db.get(`SELECT * FROM status LIMIT 1`, (err, row) => {
+    const userId = req.user.id;
+    const randomStatus = getRandomValue(statusValues);
+    const randomEnergySource = getRandomValue(energySources);
+    const randomNumber = Math.floor(Math.random() * 61); // Escolhe um número entre 0 e 60
+
+    db.get(`SELECT * FROM status WHERE user_id = ?`, [userId], (err, row) => {
         if (err) return res.status(500).json({ error: "Erro ao buscar status" });
-        res.json(row);
+
+        if (!row) {
+            db.run(`INSERT INTO status (user_id, status, energySource, timeRemaining) VALUES (?, ?, ?, ?)`, [userId, randomStatus, randomEnergySource, randomNumber], (err) => {
+                if (err) return res.status(500).json({ error: "Erro ao inserir status exemplo" });
+
+                db.get(`SELECT * FROM status WHERE user_id = ?`, [userId], (err, row) => {
+                    if (err) return res.status(500).json({ error: "Erro ao buscar status" });
+                    res.json(row);
+                });
+            });
+        } else {
+            res.json(row);
+        }
     });
 });
 

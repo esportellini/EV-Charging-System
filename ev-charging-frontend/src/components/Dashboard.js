@@ -34,9 +34,11 @@ function Dashboard() {
 
         fetchStatus();
     }, []);
-
+    
     // Garantir que timeRemaining seja um número válido para o cálculo
-    const percentage = typeof timeRemaining === 'number' ? (timeRemaining / 100) * 100 : 100;
+    const percentage = (((timeRemaining) / 60) * 100 - 100) * -1  // Supondo que o tempo total seja 60 minutos;
+    console.log(timeRemaining);
+    console.log(percentage);
 
     return (
         <div className="dashboard-container">
@@ -47,7 +49,7 @@ function Dashboard() {
                     <div className="status-card">
                         <p>Status: {status.status}</p>
                         <p>Fonte de Energia: {status.energySource}</p>
-                        <p>Tempo Restante: {status.timeRemaining}</p>
+                        <p>Tempo Restante: {status.timeRemaining} minutos</p>
 
                         {/* Círculo de progresso */}
                         <div className="progress-circle">

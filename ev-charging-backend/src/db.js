@@ -18,9 +18,11 @@ db.serialize(() => {
 
     db.run(`CREATE TABLE status (
         id INTEGER PRIMARY KEY,
+        user_id INTEGER,
         status TEXT,
         energySource TEXT,
-        timeRemaining TEXT
+        timeRemaining TEXT,
+        FOREIGN KEY(user_id) REFERENCES users(id)
     )`);
 
     // Inserir um usuário inicial para teste

@@ -19,9 +19,9 @@ function SignUp() {
         }
 
         try {
-            const response = await api.post('/api/register', { username, password });
+            const response = await api.post('/register', { username, password });
             console.log("Usuário registrado com sucesso:", response.data);
-            navigate('/'); // Redireciona para a tela de login após o cadastro
+            navigate('/login'); // Redireciona para a tela de login após o cadastro
         } catch (error) {
             console.error("Erro ao registrar usuário:", error.response?.data || error.message);
             setError('Erro ao criar conta. Tente novamente.');
@@ -39,6 +39,7 @@ function SignUp() {
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     required
+                    className="input-field"
                 />
                 <input
                     type="password"
@@ -46,6 +47,7 @@ function SignUp() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
+                    className="input-field"
                 />
                 <input
                     type="password"
@@ -53,11 +55,12 @@ function SignUp() {
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     required
+                    className="input-field"
                 />
-                <button type="submit">Registrar</button>
+                <button type="submit" className="submit-button">Registrar</button>
                 <p>
                     Já tem uma conta?{' '}
-                    <button type="button" onClick={() => navigate('/')}>Faça login</button>
+                    <button type="button" onClick={() => navigate('/login')}>Faça login</button>
                 </p>
             </form>
         </div>
