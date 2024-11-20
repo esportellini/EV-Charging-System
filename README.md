@@ -50,13 +50,13 @@ Para rodar o projeto, inicie primeiro o backend e depois o frontend:
 Iniciar o Backend
 No diretório backend, execute o seguinte comando:
 
-npm start
+##node src/server.js
 O servidor backend estará rodando em http://localhost:5000.
 
 Iniciar o Frontend
 Agora, no diretório frontend, execute:
 
-npm start
+##npm start
 O frontend estará acessível em http://localhost:3000.
 
 5. Acessar o Projeto
