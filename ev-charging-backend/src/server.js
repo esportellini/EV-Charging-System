@@ -131,6 +131,10 @@ app.put('/api/preferences', authenticateToken, (req, res) => {
                 return res.json({ message: "Preferências salvas com sucesso" });
             });
         }
+
+        db.all(`SELECT * FROM preferences`, (err, rows) => {
+                console.log('Preferencias:', rows);
+        });
     });
 });
 
