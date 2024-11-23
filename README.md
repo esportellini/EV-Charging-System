@@ -2,7 +2,7 @@
 
 Este é um projeto desenvolvido com React, Express, e SQLite, que visa fornecer uma interface para monitorar o status de recarga de veículos elétricos. O sistema permite que o usuário se cadastre, faça login, visualize o status da recarga e configure preferências para otimizar o processo de carregamento.
 
-###Demonstração: https://www.youtube.com/watch?v=1csUPOI4o6o
+###Demonstração: [https://www.youtube.com/watch?v=1csUPOI4o6o](https://www.youtube.com/watch?v=ovWVAht1XEs)
 
 # Funcionalidades
 
